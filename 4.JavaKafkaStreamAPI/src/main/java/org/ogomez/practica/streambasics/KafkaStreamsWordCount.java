@@ -83,6 +83,7 @@ public class KafkaStreamsWordCount {
         .count();
 
     wordCounts.toStream().to(OUTPUT_TOPIC, Produced.with(Serdes.String(), Serdes.Long()));
+
   }
 
   public static void main(String[] args) {

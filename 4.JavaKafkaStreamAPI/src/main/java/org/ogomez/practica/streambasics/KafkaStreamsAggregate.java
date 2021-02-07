@@ -87,7 +87,7 @@ public class KafkaStreamsAggregate {
         .groupByKey();
 
     KStream<String, Long> outputStream = inputStream
-        .windowedBy(TimeWindows.of(Duration.ofSeconds(20)))
+        .windowedBy(TimeWindows.of(Duration.ofMinutes(2)))
         .aggregate(() -> 0L, (key, newValue, aggValue) -> newValue + aggValue,
             Materialized.with(Serdes.String(), Serdes.Long()))
         .toStream()

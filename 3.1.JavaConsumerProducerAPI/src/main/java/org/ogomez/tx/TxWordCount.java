@@ -28,7 +28,7 @@ public class TxWordCount {
 
   private static final String CONSUMER_GROUP_ID = "wordcount-group-id";
   private static final String OUTPUT_TOPIC = "tx-wordcount-output-topic";
-  private static final String INPUT_TOPIC = "tx-wordcount-input-topic";
+  private static final String INPUT_TOPIC = "wordcount-input-topic";
   private static final String BOOTSTRAP_SERVER = "127.0.0.1:9092, 127.0.0.1:9093, 127.0.0.1:9094";
   public static void main(String[] args) {
 
