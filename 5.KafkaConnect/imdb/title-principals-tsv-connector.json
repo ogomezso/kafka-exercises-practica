@@ -1,0 +1,17 @@
+{
+  "name": "title-principals-tsv-source",
+  "config": {
+    "connector.class": "com.github.jcustenborder.kafka.connect.spooldir.SpoolDirCsvSourceConnector",
+    "tasks.max": 1,
+    "input.path": "/home/appuser/datasets/title.principals",
+    "input.file.pattern": "title.principals.*",
+    "error.path": "/home/appuser/errors",
+    "finished.path": "/home/appuser/finished",
+    "halt.on.error": true,
+    "topic": "imdb-movies-titles-principals-topic",
+    "schema.generation.enabled": true,
+    "csv.first.row.as.header": true,
+    "csv.separator.char": 9,
+    "batch.size": 1
+  }
+}
