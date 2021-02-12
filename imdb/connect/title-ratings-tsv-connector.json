@@ -1,0 +1,17 @@
+{
+  "name": "title-ratings-tsv-source",
+  "config": {
+    "connector.class": "com.github.jcustenborder.kafka.connect.spooldir.SpoolDirCsvSourceConnector",
+    "tasks.max": 1,
+    "input.path": "/home/appuser/datasets/title.ratings",
+    "input.file.pattern": "title.rating.*",
+    "error.path": "/home/appuser/errors",
+    "finished.path": "/home/appuser/finished",
+    "halt.on.error": true,
+    "topic": "imdb-title-ratings-topic",
+    "schema.generation.enabled": true,
+    "csv.first.row.as.header": true,
+    "csv.separator.char": 9,
+    "batch.size": 1
+  }
+}
