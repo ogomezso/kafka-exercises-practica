@@ -7,3 +7,7 @@
 /4.JavaKafkaStreamAPI/target/
 /1.Environment/host-volume/datasets/movies.title.basics/
 /1.Environment/host-volume/datasets/title.ratings/
+/imdb/target/
+/imdb/imdb.iml
+/1.Environment/host-volume/errors/
+/1.Environment/host-volume/finished/
