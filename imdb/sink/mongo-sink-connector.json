@@ -1,0 +1,25 @@
+{
+  "name": "mongo-sink",
+  "config": {
+    "topics": "imdb-rated-movies-topic",
+    "connector.class": "com.mongodb.kafka.connect.MongoSinkConnector",
+    "tasks.max": 1,
+    "key.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "connection.uri": "mongodb://mongo1:27017,mongo2:27017,mongo3:27017",
+    "database": "test",
+    "collection": "moviesRated",
+    "max.num.retries": 1,
+    "retries.defer.timeout": 5000,
+    "key.projection.type": "none",
+    "key.projection.list": "",
+    "value.projection.type": "none",
+    "value.projection.list": "",
+    "document.id.strategy": "com.mongodb.kafka.connect.sink.processor.id.strategy.BsonOidStrategy",
+    "post.processor.chain": "com.mongodb.kafka.connect.sink.processor.DocumentIdAdder",
+    "type.name":"kafka-connect",
+    "schemas.enable":"true",
+    "key.converter.schemas.enable":"false",
+    "value.converter.schemas.enable":"false"
+  }
+}

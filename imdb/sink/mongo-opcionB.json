@@ -1,0 +1,15 @@
+{
+  "name": "mongo-sink-connector",
+  "config": {
+    "connector.class": "com.mongodb.kafka.connect.MongoSinkConnector",
+    "tasks.max": 1,
+    "key.converter": "io.confluent.connect.avro.AvroConverter",
+    "value.converter": "io.confluent.connect.avro.AvroConverter",
+    "topics": "imdb-rated-movies-topic",
+    "connection.uri": "mongodb://mongo1:27017,mongo2:27017,mongo3:27017",
+    "max.num.retries": 5,
+    "retries.defer.timeout": 5000,
+    "database": "test",
+    "collection": "moviesRate"
+  }
+}
