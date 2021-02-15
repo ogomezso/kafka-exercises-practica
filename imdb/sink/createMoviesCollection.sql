@@ -1,18 +1,22 @@
 db.createCollection( "moviesRated", {
+   autoIndexId: true,
    validator: { $jsonSchema: {
       bsonType: "object",
-      required: [ "originalTitle" ],
       properties: {
+         tconst: {
+            bsonType: "string",
+            description: "title"
+         },
          originalTitle: {
             bsonType: "string",
             description: "title"
          },
          averageRating: {
-            bsonType : "string",
+            bsonType : "double",
             description: "rating"
          },
          numVotes: {
-            bsonType : "string",
+            bsonType : "int",
             description: "num votos"
          }
       }
